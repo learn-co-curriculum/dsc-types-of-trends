@@ -17,20 +17,20 @@ You will be able to:
 
 A time series is said to be stationary if its statistical properties such as mean, variance remain constant over time. 
 
-Why is it important? Because most time series models work on the assumption that **the time series are stationary**. For general time series datasets, if it shows a particular behaviour over time, there is a very high probability that it will follow a similar behaviour in the future. Also, the theories related to stationary series are more mature and easier to implement as compared to non-stationary series.
+Why is it important? Because most time series models work on the assumption that **the time series are stationary**. For general time series datasets, if it shows a particular behavior over time, there is a very high probability that it will follow a similar behavior in the future. Also, the theories related to stationary series are more mature and easier to implement as compared to non-stationary series.
 
 Although stationarity is defined using very strict criteria, for practical purposes we can assume the series to be stationary if it has following constant statistical properties over time:
 
 > * **The mean of the series should not be a function of time rather should be a constant. The image below has the left hand graph satisfying the condition whereas the graph in red has a time dependent mean.**
 
-![](Mean_nonstationary.png)
+![](images/mean_nonstationary.png)
 
 > * **The variance of the series should not a be a function of time. This property is known as homoscedasticity. Following graph depicts what is and what is not a stationary series. (Notice the varying spread of distribution in the right hand graph)**
 
-![](Var_nonstationary.png)
+![](images/var_nonstationary.png)
 > * **The covariance of the i th term and the (i + m) th term should not be a function of time. In the following graph, you will notice the spread becomes closer as the time increases. Hence, the covariance is not constant with time for the ‘red series’ below.**
 
-![](Cov_nonstationary.png)
+![](images/cov_nonstationary.png)
 
 ## Types of trends: overview
 
@@ -59,7 +59,7 @@ plt.ylim((-0.15,0.15));
 ```
 
 
-![png](index_files/index_10_0.png)
+![png](index_files/index_1_0.png)
 
 
 
@@ -126,7 +126,7 @@ data.head()
 
 #### Upward linear
 
-In many cases, there will be some sort of trend, however. A common trend type is a linear trend, where the observation grows bigger over time, or declines. Examples given here are the quarterly U.K. importes of goods and services over time. A second example is a record of the winning times for the men's 400 m final at the olympics. Note how the winning time has gone down over the years!
+In many cases, there will be some sort of trend, however. A common trend type is a linear trend, where the observation grows bigger over time, or declines. Examples given here are the quarterly U.K. imports of goods and services over time. A second example is a record of the winning times for the men's 400 m final at the Olympics. Note how the winning time has gone down over the years!
 
 
 ```python
@@ -140,7 +140,7 @@ plt.xlabel('Year', fontsize=20);
 ```
 
 
-![png](index_files/index_15_0.png)
+![png](index_files/index_4_0.png)
 
 
 #### Downward linear
@@ -165,7 +165,7 @@ plt.ylabel("winning times (in seconds)", fontsize=20);
 ```
 
 
-![png](index_files/index_19_0.png)
+![png](index_files/index_7_0.png)
 
 
 ### Exponential trend
@@ -194,7 +194,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_22_0.png)
+![png](index_files/index_9_0.png)
 
 
 ### Periodic Trend
@@ -274,7 +274,7 @@ plt.ylabel('Temperature (Degrees Celsius)', fontsize=20);
 ```
 
 
-![png](index_files/index_25_0.png)
+![png](index_files/index_12_0.png)
 
 
 ### Trend with an increasing variance
@@ -304,7 +304,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_28_0.png)
+![png](index_files/index_14_0.png)
 
 
 ### Periodic and upward trend
@@ -324,7 +324,7 @@ plt.ylabel('Miles', fontsize=20);
 ```
 
 
-![png](index_files/index_30_0.png)
+![png](index_files/index_16_0.png)
 
 
 ## Testing for trends
@@ -353,7 +353,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_33_0.png)
+![png](index_files/index_18_0.png)
 
 
  In what follows, we'll discuss two formal ways to assess trends:
@@ -384,7 +384,7 @@ plt.show(block=False)
 ```
 
 
-![png](index_files/index_38_0.png)
+![png](index_files/index_21_0.png)
 
 
 The red and black lines represent the rolling mean and rolling standard deviations. You can clearly see that the mean is not constant over time, so we can reconfirm our conclusion that the time series are not stationary based on rolling mean and rolling standard error. 
@@ -441,4 +441,4 @@ A great overview of how to test for time series stationarity can be found [here]
 
 ## Summary
 
-In this lab, you learned how to check for the stationarity of a time series object in python. You used rolling statistics, with rolling mean and rolling standrad deviation to check for trends and seasonal elements in a time series, and how to use Dickey Fuller test to run statistical test on a time series and check for its stationarity with a significance level.
+In this lab, you learned how to check for the stationarity of a time series object in python. You used rolling statistics, with rolling mean and rolling standard deviation to check for trends and seasonal elements in a time series, and how to use Dickey Fuller test to run statistical test on a time series and check for its stationarity with a significance level.
