@@ -23,14 +23,14 @@ Although stationarity is defined using very strict criteria, for practical purpo
 
 > * **The mean of the series should not be a function of time rather should be a constant. The image below has the left hand graph satisfying the condition whereas the graph in red has a time dependent mean.**
 
-![](images/mean_nonstationary.png)
+<img src="images/new_mean_nonstationary.png" width="600">
 
 > * **The variance of the series should not a be a function of time. This property is known as homoscedasticity. Following graph depicts what is and what is not a stationary series. (Notice the varying spread of distribution in the right hand graph)**
 
-![](images/var_nonstationary.png)
+<img src="images/new_var_nonstationary.png" width="600">
 > * **The covariance of the i th term and the (i + m) th term should not be a function of time. In the following graph, you will notice the spread becomes closer as the time increases. Hence, the covariance is not constant with time for the ‘red series’ below.**
 
-![](images/cov_nonstationary.png)
+<img src="images/new_cov_nonstationary.png" width="600">
 
 ## Types of trends: overview
 
