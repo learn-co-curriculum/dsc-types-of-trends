@@ -34,7 +34,7 @@ Although stationarity is defined using very strict criteria, for practical purpo
 
 ## Types of trends: overview
 
-WHen time series models are not stationary, we say there is a **trend**. Let's have a look at a few examples of trends that can be observed in time series models.
+When time series models are not stationary, we say there is a **trend**. Let's have a look at a few examples of trends that can be observed in time series models.
 
 ### No trend
 
