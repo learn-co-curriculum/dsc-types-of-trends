@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Often, basic regression techniques are not sufficient to grasp the more complex, time-dependent patterns that are common when dealing with time series data. Using time series analysis techniques, the purpose is to get more insight in your data on one hand, and to make predictions on the other hand. First, we'll introduce the types of trends that exist in time series models and have a look at them.
+Often, basic regression techniques are not sufficient to grasp the more complex, time-dependent patterns that are common when dealing with time series data. Using time series analysis techniques, the purpose is to get more insight into your data on one hand and to make predictions on the other hand. First, we'll introduce the types of trends that exist in time series models and have a look at them.
 
 ## Objectives
 
@@ -11,7 +11,7 @@ You will be able to:
 
 * Check and comment on the stationarity of time series data 
 * Use rolling statistics as an initial check for stationarity 
-* Use the Dickey Fuller Test for performing statistical testing for time series stationarity
+* Use the Dickey-Fuller Test for performing statistical testing for time series stationarity
 
 ## Stationarity
 
@@ -21,11 +21,11 @@ Why is it important? Because most time series models work on the assumption that
 
 Although stationarity is defined using very strict criteria, for practical purposes we can assume the series to be stationary if it has following constant statistical properties over time:
 
-> * **The mean of the series should not be a function of time rather should be a constant. The image below has the left hand graph satisfying the condition whereas the graph in red has a time dependent mean.**
+> * **The mean of the series should not be a function of time rather should be a constant. The image below has the left-hand graph satisfying the condition whereas the graph in red has a time-dependent mean.**
 
 <img src="images/new_mean_nonstationary.png" width="600">
 
-> * **The variance of the series should not a be a function of time. This property is known as homoscedasticity. Following graph depicts what is and what is not a stationary series. (Notice the varying spread of distribution in the right hand graph)**
+> * **The variance of the series should not be a function of time. This property is known as homoscedasticity. The following graph depicts what is and what is not a stationary series. (Notice the varying spread of distribution in the right-hand graph)**
 
 <img src="images/new_var_nonstationary.png" width="600">
 > * **The covariance of the i th term and the (i + m) th term should not be a function of time. In the following graph, you will notice the spread becomes closer as the time increases. Hence, the covariance is not constant with time for the ‘red series’ below.**
@@ -38,7 +38,7 @@ When time series models are not stationary, we say there is a **trend**. Let's h
 
 ### No trend
 
-Let's consider our the monthly returns for the NYSE from January 1961 through December 1966 again. You'll notice that the monthly return goes up and down, but there is no clear direction, and over time, the index oscillates around 0. We say that this particular time series has *no trend*. 
+Let's consider the monthly returns for the NYSE from January 1961 through December 1966 again. You'll notice that the monthly return goes up and down, but there is no clear direction, and over time, the index oscillates around 0. We say that this particular time series has *no trend*. 
 
 
 ```python
@@ -170,7 +170,7 @@ plt.ylabel("winning times (in seconds)", fontsize=20);
 
 ### Exponential trend
 
-Another type of trend that can be observed is an exponential trend. A typical example could be a company's sales. As small companies start to grow sales could be slower, when their product catches people's attention the sales can start to grow exponentially. A simulated example can be found below.
+Another type of trend that can be observed is an exponential trend. A typical example could be a company's sales. As small companies start to grow sales could be slower; when their product catches people's attention the sales can start to grow exponentially. A simulated example can be found below.
 
 
 ```python
@@ -364,7 +364,7 @@ plt.show()
 
 We can plot the moving average or moving variance and see if it varies with time. By moving average/variance we mean **at any point in time $t$, we can take the average/variance of the, let's say, $m$ last time periods. $m$ is then known as the window size**. 
 
-Pandas has a built in function called [rolling()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.rolling.html), which can be called along with `.mean()` and `.std()` to calculate these rolling statistics. Let's take a window size of 8 for this example.
+Pandas has a built-in function called [rolling()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.rolling.html), which can be called along with `.mean()` and `.std()` to calculate these rolling statistics. Let's take a window size of 8 for this example.
 
 
 ```python
@@ -389,10 +389,10 @@ plt.show(block=False)
 
 The red and black lines represent the rolling mean and rolling standard deviations. You can clearly see that the mean is not constant over time, so we can reconfirm our conclusion that the time series are not stationary based on rolling mean and rolling standard error. 
 
-### The Dickey Fuller Test
+### The Dickey-Fuller Test
 
-The Dickey Fuller Test is a statistical test for testing stationarity. The Null-hypothesis for the test is that the time series is not stationary. So if the test statistic is less than the critical value, we reject the null
-hypothesis and say that the series is stationary. The Dickey Fuller test is available in stattools from the StatsModels module. More details on this can be viewed [here](http://www.statsmodels.org/dev/generated/statsmodels.tsa.stattools.adfuller.html).
+The Dickey-Fuller Test is a statistical test for testing stationarity. The Null-hypothesis for the test is that the time series is not stationary. So if the test statistic is less than the critical value, we reject the null
+hypothesis and say that the series is stationary. The Dickey-Fuller test is available in stattools from the StatsModels module. More details on this can be viewed [here](http://www.statsmodels.org/dev/generated/statsmodels.tsa.stattools.adfuller.html).
 
 
 ```python
@@ -414,7 +414,7 @@ print(dftest)
       from pandas.core import datetools
 
 
-A nice print-out of the Dickey Fuller test can be found below.
+A nice print-out of the Dickey-Fuller test can be found below.
 The p-value is 1 here, so the time series are clearly not stationary!
 
 
@@ -441,4 +441,4 @@ A great overview of how to test for time series stationarity can be found [here]
 
 ## Summary
 
-In this lab, you learned how to check for the stationarity of a time series object in python. You used rolling statistics, with rolling mean and rolling standard deviation to check for trends and seasonal elements in a time series, and how to use Dickey Fuller test to run statistical test on a time series and check for its stationarity with a significance level.
+In this lab, you learned how to check for the stationarity of a time series object in python. You used rolling statistics, with rolling mean and rolling standard deviation to check for trends and seasonal elements in a time series, and how to use Dickey-Fuller test to run a statistical test on a time series and check for its stationarity with a significance level.
