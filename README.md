@@ -9,9 +9,9 @@ Often, basic regression techniques are not sufficient to grasp the more complex,
 
 You will be able to:
 
-* Check and comment on the stationarity of time series data 
-* Use rolling statistics as an initial check for stationarity 
-* Use the Dickey-Fuller Test for performing statistical testing for time series stationarity
+- Check and comment on the stationarity of time series data 
+- Use rolling statistics as an initial check for stationarity 
+- Use the Dickey-Fuller Test for performing statistical testing for time series stationarity
 
 ## Stationarity
 
