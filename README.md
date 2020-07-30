@@ -203,7 +203,7 @@ Trends can also go both up and down. In many applications, what will happen is t
 
 ```python
 data = pd.read_csv('min_temp.csv')
-data['Date'] = pd.to_datetime(data['Date'])
+data['Date'] = pd.to_datetime(data['Date'], format='%d/%m/%y')
 data.set_index('Date', inplace=True)
 
 data.head()
@@ -243,19 +243,19 @@ data.head()
       <td>20.7</td>
     </tr>
     <tr>
-      <th>1981-02-01</th>
+      <th>1981-01-02</th>
       <td>17.9</td>
     </tr>
     <tr>
-      <th>1981-03-01</th>
+      <th>1981-01-03</th>
       <td>18.8</td>
     </tr>
     <tr>
-      <th>1981-04-01</th>
+      <th>1981-01-04</th>
       <td>14.6</td>
     </tr>
     <tr>
-      <th>1981-05-01</th>
+      <th>1981-01-05</th>
       <td>15.8</td>
     </tr>
   </tbody>
